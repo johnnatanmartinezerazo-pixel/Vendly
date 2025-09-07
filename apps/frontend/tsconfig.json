@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                       // Modern JS
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // APIs modernas + navegador
+    "module": "ESNext",
+    "skipLibCheck": true,                     // Evita errores de tipado en dependencias
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,                           // Tipado estricto
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Bundler",            // Recomendado para Vite 5+
+    "resolveJsonModule": true,                // Permite importar JSON
+    "isolatedModules": true,                  // Requerido por Vite/Next/TSC
+    "noEmit": true,                           // Solo chequea tipos, no genera JS
+    "jsx": "react-jsx",                       // JSX moderno con React 18+
+    "types": ["vitest/globals", "vite/client"], // soporte tests y Vite env
+    "baseUrl": "./src",                       // Base para imports relativos
+    "paths": {
+      "@/*": ["./*"]                          // Alias "@/components/..." → src/components
+    }
+  },
+  "include": [
+    "src",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
